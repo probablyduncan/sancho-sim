@@ -1,0 +1,17 @@
+---
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+const props = Astro.props;
+
+props.title ??= props.href?.toString() ?? "";
+props.target ??= "_blank";
+---
+
+<a
+    {...props}
+    class:list={[
+        // "font-semibold",
+        "underline decoration-dotted hover:decoration-solid",
+        "decoration-1",
+        "outline-offset-2 focus:outline-2",
+    ]}><slot /></a
+>

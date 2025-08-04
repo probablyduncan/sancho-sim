@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer base {
+
+    @font-face {
+        font-family: Junicode;
+        font-style: normal;
+        font-weight: 300, 700;
+        font-display: swap;
+        src: url("/junicode.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "Junicode-Fallback";
+        src: local("Times New Roman");
+    }
+
+    body {
+        font-synthesis: none;
+    }
+}
+
+@theme {
+    --font-serif: "Junicode", "Junicode-Fallback", sans-serif;
+}
